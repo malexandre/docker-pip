@@ -1,8 +1,12 @@
 FROM alpine
 LABEL maintainer "marc@malexandre.fr"
 
-RUN apk update && apk add git python wget openssh-client && rm -rf /var/cache/apk/*
-RUN wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate && python get-pip.py && rm get-pip.py
-RUN apk del wget
+RUN apk update
+RUN apk add git
+RUN apk add python
+RUN apk add py-pip
+RUN apk add openssh-client
+RUN rm -rf /var/cache/apk/*
+RUN pip install --upgrade pip
 
 WORKDIR /code
