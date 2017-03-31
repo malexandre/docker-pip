@@ -6,6 +6,10 @@ RUN apk add git
 RUN apk add python
 RUN apk add py-pip
 RUN apk add openssh-client
+RUN apk add openssl-dev
+RUN apk add python-dev
+RUN apk add libffi-dev
+RUN apk add build-base
 RUN rm -rf /var/cache/apk/*
 RUN pip install --upgrade pip
 
