@@ -11,6 +11,8 @@ RUN apk add openssl-dev
 RUN apk add python-dev
 RUN apk add libffi-dev
 RUN apk add build-base
+RUN apk add jpeg-dev
+RUN apk add zlib-dev
 RUN rm -rf /var/cache/apk/*
 RUN pip install --upgrade pip
 
