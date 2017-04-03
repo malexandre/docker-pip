@@ -5,6 +5,7 @@ RUN apk update
 RUN apk add git
 RUN apk add python
 RUN apk add py-pip
+RUN apk add py-pillow
 RUN apk add openssh-client
 RUN apk add openssl-dev
 RUN apk add python-dev
